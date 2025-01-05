@@ -1,6 +1,6 @@
-# Hazel PDF Rename Script with OCR and OpenAI Integration
+# PDF Rename Script with OCR and OpenAI Integration
 
-This script is designed to work with Hazel to automate the processing of scanned PDF files. It performs OCR (if necessary), extracts meaningful text, and uses OpenAI to generate a concise and descriptive filename. The original file is then renamed and deleted to keep your folder clean and organized.
+This script is designed to work to automate the processing of scanned PDF files. It performs OCR (if necessary), extracts meaningful text, and uses OpenAI to generate a concise and descriptive filename. The original file is then renamed and deleted to keep your folder clean and organized.
 
 ---
 
@@ -8,7 +8,7 @@ This script is designed to work with Hazel to automate the processing of scanned
 
 - **OCR Support:** Uses `ocrmypdf` to add OCR to PDFs that don't already contain text.
 - **Filename Generation:** Sends text extracted from the PDF to OpenAI's GPT-3.5-Turbo API to generate a short, meaningful filename.
-- **Loop Prevention:** Ensures Hazel does not reprocess renamed files.
+- **Loop Prevention:** Ensures script does not reprocess renamed files.
 - **Clean-Up:** Deletes the original file after processing.
 
 ---
@@ -21,7 +21,7 @@ This script is designed to work with Hazel to automate the processing of scanned
   - `jq` (for JSON handling)
   - `curl` (for OpenAI API calls)
 
-- **OpenAI API Key:** You must have an OpenAI API key and add it to the script.
+- **OpenAI API Key:** You must have an OpenAI API key
 
 ---
 
@@ -35,7 +35,7 @@ This script is designed to work with Hazel to automate the processing of scanned
 
 2. Edit the script and replace the placeholder `OPENAI_API_KEY` with your actual OpenAI API key.
 
-3. Save the script (e.g., `rename_with_openai_for_hazel.sh`) in a location accessible to Hazel.
+3. Save the script (e.g., `rename_with_openai.sh`) in a location accessible to Hazel.
 
 4. Make the script executable:
    ```bash
@@ -50,7 +50,7 @@ This script is designed to work with Hazel to automate the processing of scanned
    - **If:**
      - Name contains `SCAN`
    - **Do:**
-     - Run shell script: Select the `rename_with_openai_for_hazel.sh` script.
+     - Run shell script: Select the `rename_with_openai.sh` script.
 
 2. **Optional Conditions:**
    - You can customize the rule further, such as only matching specific file types.
@@ -84,7 +84,7 @@ You are a helpful assistant that creates concise filenames for cleaning up scann
   1. Ensure all tools (`ocrmypdf`, `pdftotext`, `jq`, `curl`) are installed and in your PATH.
   2. Manually run the script in the terminal:
      ```bash
-     /path/to/rename_with_openai_for_hazel.sh /path/to/testfile.pdf
+     /path/to/rename_with_openai.sh /path/to/testfile.pdf
      ```
   3. Check Hazel's logs for errors.
 

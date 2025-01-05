@@ -1,4 +1,3 @@
-```markdown
 # Hazel PDF Rename Script with OCR and OpenAI Integration
 
 This script is designed to work with Hazel to automate the processing of scanned PDF files. It performs OCR (if necessary), extracts meaningful text, and uses OpenAI to generate a concise and descriptive filename. The original file is then renamed and deleted to keep your folder clean and organized.
